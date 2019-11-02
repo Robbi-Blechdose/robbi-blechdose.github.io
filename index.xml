@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Robbi Blechdose&#39;s Blog</title>
-    <link>https://www.robbi-blechdose.github.io/</link>
+    <link>https://robbi-blechdose.github.io/</link>
     <description>Recent content on Robbi Blechdose&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 30 Oct 2019 13:37:18 +0100</lastBuildDate>
     
-	<atom:link href="https://www.robbi-blechdose.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://robbi-blechdose.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>S-RC Bots Screenshots</title>
-      <link>https://www.robbi-blechdose.github.io/s-rc-bots_screenshots/</link>
+      <link>https://robbi-blechdose.github.io/s-rc-bots_screenshots/</link>
       <pubDate>Wed, 30 Oct 2019 13:37:18 +0100</pubDate>
       
-      <guid>https://www.robbi-blechdose.github.io/s-rc-bots_screenshots/</guid>
+      <guid>https://robbi-blechdose.github.io/s-rc-bots_screenshots/</guid>
       <description>Back</description>
     </item>
     
     <item>
       <title>S-RC Bots</title>
-      <link>https://www.robbi-blechdose.github.io/s-rc-bots_index/</link>
+      <link>https://robbi-blechdose.github.io/s-rc-bots_index/</link>
       <pubDate>Tue, 29 Oct 2019 14:20:38 +0100</pubDate>
       
-      <guid>https://www.robbi-blechdose.github.io/s-rc-bots_index/</guid>
+      <guid>https://robbi-blechdose.github.io/s-rc-bots_index/</guid>
       <description>A game about building the very best bot from the parts you have! With that, you&amp;rsquo;ll have to do missions which will reward you with more parts.   Take a look here for more screenshots: Screenshots
 Content Your Bot can be customized in a variety of ways!
 There are multiple chassis parts to swap out: The bot head, which is basically your command center.
@@ -34,10 +34,10 @@ The left and right torso are normally used for ammuniton.</description>
     
     <item>
       <title>GB-J Compiler released</title>
-      <link>https://www.robbi-blechdose.github.io/post/2019-10-27-03-gb-j-compiler/</link>
+      <link>https://robbi-blechdose.github.io/post/2019-10-27-03-gb-j-compiler/</link>
       <pubDate>Sun, 27 Oct 2019 22:05:42 +0100</pubDate>
       
-      <guid>https://www.robbi-blechdose.github.io/post/2019-10-27-03-gb-j-compiler/</guid>
+      <guid>https://robbi-blechdose.github.io/post/2019-10-27-03-gb-j-compiler/</guid>
       <description>GB-J Compiler released! A compiler for a custom Java- and C-like language targeting the GameBoy This is a project I&amp;rsquo;ve been working on for quite a while, and I&amp;rsquo;d like to continue doing so in the future.
 It started out as a school project for my A-levels: Write a compiler.
 Choosing the target The original idea was to target some fantasy computer to reduce the complexity of the project. I quickly abandoned that in favor of the GameBoy.</description>
@@ -45,10 +45,10 @@ Choosing the target The original idea was to target some fantasy computer to red
     
     <item>
       <title>Car Gauge Unit</title>
-      <link>https://www.robbi-blechdose.github.io/post/2019-10-27-02-car-gauge-unit/</link>
+      <link>https://robbi-blechdose.github.io/post/2019-10-27-02-car-gauge-unit/</link>
       <pubDate>Sun, 27 Oct 2019 14:29:34 +0100</pubDate>
       
-      <guid>https://www.robbi-blechdose.github.io/post/2019-10-27-02-car-gauge-unit/</guid>
+      <guid>https://robbi-blechdose.github.io/post/2019-10-27-02-car-gauge-unit/</guid>
       <description>Car Gauge Unit A project involving Arduino, 3D-Printing and my car This project requires a bit of background information: My car has two standard DIN slots.
 The lower one is used up by the car radio, but the upper one just contained a laughably small second glovebox.
 Then suddenly, I had an idea: My car is too old to calculate its gas mileage itself, so I might as well add in a device capable of doing that.</description>
@@ -56,10 +56,10 @@ Then suddenly, I had an idea: My car is too old to calculate its gas mileage its
     
     <item>
       <title>New Blog! 🎉</title>
-      <link>https://www.robbi-blechdose.github.io/post/2019-10-27-01-first-post/</link>
+      <link>https://robbi-blechdose.github.io/post/2019-10-27-01-first-post/</link>
       <pubDate>Sun, 27 Oct 2019 13:52:30 +0100</pubDate>
       
-      <guid>https://www.robbi-blechdose.github.io/post/2019-10-27-01-first-post/</guid>
+      <guid>https://robbi-blechdose.github.io/post/2019-10-27-01-first-post/</guid>
       <description> New Blog! 🎉 This is the new blog I&amp;rsquo;ll be using from now on. It&amp;rsquo;ll include posts on all kinds of topics, including (but not limited to):
  Gamedev (for the GameBoy)
  Gamedev (for PC)
