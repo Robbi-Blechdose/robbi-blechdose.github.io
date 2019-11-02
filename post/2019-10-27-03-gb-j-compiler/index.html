@@ -232,8 +232,11 @@ Currently, GB-J&rsquo;s standard library contains functions for the following th
 
 <p>The parser is a recursive descent parser. While running, it also checks for syntax errors and stops the
 compilation process if one is encountered.
-It generates an abstract syntax tree containing the entire program, which is then passed to the code generator.
-The code generator then takes the AST and works through it recursively, generating code snippets for each node.
+It generates an abstract syntax tree containing the entire program, which is then passed to the code generator.</p>
+
+<hr />
+
+<p>The code generator then takes the AST and works through it recursively, generating code snippets for each node.
 The generated code is assembly in textual format, which the optimizer can run multiple passes over to replace
 known slow parts with faster ones.</p>
 
