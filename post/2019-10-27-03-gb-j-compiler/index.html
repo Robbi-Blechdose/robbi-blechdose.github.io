@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>GB-J Compiler released :: Robbi Blechdose&#39;s Blog</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="GB-J Compiler released! A compiler for a custom Java- and C-like language targeting the GameBoy This is a project I&amp;rsquo;ve been working on for quite a while, and I&amp;rsquo;d like to continue doing so in the future.
+It started out as a school project for my A-levels: Write a compiler.
+Choosing the target The original idea was to target some fantasy computer to reduce the complexity of the project. I quickly abandoned that in favor of the GameBoy."/>
+<meta name="keywords" content=""/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="http://robbi-blechdose.github.io/post/2019-10-27-03-gb-j-compiler/" />
+
+
+<link rel="stylesheet" href="http://robbi-blechdose.github.io/assets/style.css">
+
+
+
+
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://robbi-blechdose.github.io/img/apple-touch-icon-144-precomposed.png">
+
+<link rel="shortcut icon" href="http://robbi-blechdose.github.io/img/favicon/orange.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="GB-J Compiler released :: Robbi Blechdose&#39;s Blog — " />
+<meta name="twitter:description" content="GB-J Compiler released! A compiler for a custom Java- and C-like language targeting the GameBoy This is a project I&amp;rsquo;ve been working on for quite a while, and I&amp;rsquo;d like to continue doing so in the future.
+It started out as a school project for my A-levels: Write a compiler.
+Choosing the target The original idea was to target some fantasy computer to reduce the complexity of the project. I quickly abandoned that in favor of the GameBoy." />
+<meta name="twitter:site" content="http://robbi-blechdose.github.io/" />
+<meta name="twitter:creator" content="" />
+<meta name="twitter:image" content="">
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="GB-J Compiler released :: Robbi Blechdose&#39;s Blog — ">
+<meta property="og:description" content="GB-J Compiler released! A compiler for a custom Java- and C-like language targeting the GameBoy This is a project I&amp;rsquo;ve been working on for quite a while, and I&amp;rsquo;d like to continue doing so in the future.
+It started out as a school project for my A-levels: Write a compiler.
+Choosing the target The original idea was to target some fantasy computer to reduce the complexity of the project. I quickly abandoned that in favor of the GameBoy." />
+<meta property="og:url" content="http://robbi-blechdose.github.io/post/2019-10-27-03-gb-j-compiler/" />
+<meta property="og:site_name" content="GB-J Compiler released" />
+<meta property="og:image" content="">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2019-10-27 22:05:42 &#43;0100 CET" />
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="">
+
+
+<div class="container center">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    Robbi Blechdose
+  </div>
+</a>
+
+    </div>
+    <div class="menu-trigger">menu</div>
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/s-rc-bots_index">S-RC Bots</a></li>
+        
+      
+        
+          <li><a href="https://twitter.com/robbi_blechdose">Twitter</a></li>
+        
+      
+        
+          <li><a href="https://www.youtube.com/user/Therobbi2011/">YouTube</a></li>
+        
+      
+      
+    
+
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/s-rc-bots_index">S-RC Bots</a></li>
+      
+    
+      
+        <li><a href="https://twitter.com/robbi_blechdose">Twitter</a></li>
+      
+    
+      
+        <li><a href="https://www.youtube.com/user/Therobbi2011/">YouTube</a></li>
+      
+    
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="http://robbi-blechdose.github.io/post/2019-10-27-03-gb-j-compiler/">GB-J Compiler released</a></h1>
+  <div class="post-meta">
+      
+    <span class="post-date">
+      2019-10-27
+    </span>
+    
+    
+  </div>
+
+  
+
+  
+
+  <div class="post-content">
+    
+
+<h1 id="gb-j-compiler-released">GB-J Compiler released!</h1>
+
+<h4 id="a-compiler-for-a-custom-java-and-c-like-language-targeting-the-gameboy">A compiler for a custom Java- and C-like language targeting the GameBoy</h4>
+
+<hr />
+
+<p>This is a project I&rsquo;ve been working on for quite a while, and I&rsquo;d like to continue doing so in the future.</p>
+
+<p>It started out as a school project for my A-levels: Write a compiler.</p>
+
+<h4 id="choosing-the-target">Choosing the target</h4>
+
+<hr />
+
+<p>The original idea was to target some fantasy computer to reduce the complexity of the project. I quickly abandoned that in favor
+of the GameBoy. There were a few points I loved about it, and which managed to convince my teacher as well:</p>
+
+<ul>
+<li>It&rsquo;s an actual device. Testing on hardware is possible, with (limited) practical use too</li>
+<li>There are great emulators for it - with better debugging features and readouts than the fantasy computer too</li>
+<li>The restrictions are more realistic and more interesting</li>
+<li>There are more possibilities with it due to numerous peripherals released for it</li>
+</ul>
+
+<h4 id="the-language">The language</h4>
+
+<hr />
+
+<p>The language to be compiled was another problem: Due to the time constraints, it wasn&rsquo;t possible to implement a full language
+like C or Java according to their standard.</p>
+
+<p>A self-defined language that&rsquo;s useless except for being the one that&rsquo;s being compiled was not an option either.</p>
+
+<p>I came to a compromise: Create my own language, borrowing syntax and ideas from popular ones while tailoring it to the device
+and leaving out features where the timeframe required it.</p>
+
+<p>The result of that GB-J.</p>
+
+<h4 id="the-standard-library">The standard library</h4>
+
+<hr />
+
+<p>In addition to the language, the compiler also needed a standard library to interact with the hardware.
+Deciding on its scope was simple enough: Abstract enough to allow using the language without assembly snippets,
+abstract little enough to give programmers maximum freedom.
+Currently, GB-J&rsquo;s standard library contains functions for the following things:</p>
+
+<ul>
+<li>Graphics
+
+<ul>
+<li>Loading tiles into VRAM</li>
+<li>Loading BG and Window maps, also placing individual tiles</li>
+<li>Setting sprite data</li>
+</ul></li>
+<li>Text output
+
+<ul>
+<li>Loading a charset into VRAM</li>
+<li>Printing strings to the screen</li>
+<li>Printing variables to the screen</li>
+</ul></li>
+<li>Input</li>
+<li>GameBoy Printer support</li>
+</ul>
+
+<h4 id="compiler-architecture">Compiler architecture</h4>
+
+<hr />
+
+<p>The GB-J compiler has a pretty standard architecture, although some phases have been added:</p>
+
+<ul>
+<li>Lexer</li>
+<li>Preliminary Parser</li>
+<li>Parser</li>
+<li>Code Generator</li>
+<li>Optimizer</li>
+<li>Assembler Runner</li>
+</ul>
+
+<p>The phases Parser, Code Generator and Optimizer are probably the most interesting ones.</p>
+
+<hr />
+
+<p>The parser is a recursive descent parser. While running, it also checks for syntax errors and stops the
+compilation process if one is encountered.
+It generates an abstract syntax tree containing the entire program, which is then passed to the code generator.
+The code generator then takes the AST and works through it recursively, generating code snippets for each node.
+The generated code is assembly in textual format, which the optimizer can run multiple passes over to replace
+known slow parts with faster ones.</p>
+
+<hr />
+
+<p>Finally, the Assembler Runner starts <a href="https://github.com/rednex/rgbds">RGBDS</a>, which assembles and links the
+generated code into the final binary, a GameBoy ROM.</p>
+
+<h4 id="the-source-and-binaries">The source and binaries</h4>
+
+<hr />
+
+<p>The compiler has now been released in version 1.0 (which was the one I submitted with the paper).</p>
+
+<p>I&rsquo;m planning to continue working on it in the future though.</p>
+
+<p>The source code as well as compiled binaries are on <a href="https://www.github.com/Robbi-Blechdose/GB-J-Compiler">GitHub</a></p>
+
+  </div>
+  
+  <div class="pagination">
+    <div class="pagination__title">
+      <span
+        class="pagination__title-h">Read other posts</span>
+      <hr />
+    </div>
+    <div class="pagination__buttons">
+      
+      
+      <span class="button next">
+        <a href="http://robbi-blechdose.github.io/post/2019-10-27-02-car-gauge-unit/">
+          <span class="button__text">Car Gauge Unit</span>
+          <span class="button__icon">→</span>
+        </a>
+      </span>
+      
+    </div>
+  </div>
+  
+
+  
+
+</div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2019 Powered by <a href="http://gohugo.io">Hugo</a></span>
+    
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+<script src="http://robbi-blechdose.github.io/assets/main.js"></script>
+<script src="http://robbi-blechdose.github.io/assets/prism.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

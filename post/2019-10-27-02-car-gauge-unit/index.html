@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Car Gauge Unit :: Robbi Blechdose&#39;s Blog</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="Car Gauge Unit A project involving Arduino, 3D-Printing and my car This project requires a bit of background information: My car has two standard DIN slots.
+The lower one is used up by the car radio, but the upper one just contained a laughably small second glovebox.
+Then suddenly, I had an idea: My car is too old to calculate its gas mileage itself, so I might as well add in a device capable of doing that."/>
+<meta name="keywords" content=""/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="http://robbi-blechdose.github.io/post/2019-10-27-02-car-gauge-unit/" />
+
+
+<link rel="stylesheet" href="http://robbi-blechdose.github.io/assets/style.css">
+
+
+
+
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://robbi-blechdose.github.io/img/apple-touch-icon-144-precomposed.png">
+
+<link rel="shortcut icon" href="http://robbi-blechdose.github.io/img/favicon/orange.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Car Gauge Unit :: Robbi Blechdose&#39;s Blog — " />
+<meta name="twitter:description" content="Car Gauge Unit A project involving Arduino, 3D-Printing and my car This project requires a bit of background information: My car has two standard DIN slots.
+The lower one is used up by the car radio, but the upper one just contained a laughably small second glovebox.
+Then suddenly, I had an idea: My car is too old to calculate its gas mileage itself, so I might as well add in a device capable of doing that." />
+<meta name="twitter:site" content="http://robbi-blechdose.github.io/" />
+<meta name="twitter:creator" content="" />
+<meta name="twitter:image" content="">
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Car Gauge Unit :: Robbi Blechdose&#39;s Blog — ">
+<meta property="og:description" content="Car Gauge Unit A project involving Arduino, 3D-Printing and my car This project requires a bit of background information: My car has two standard DIN slots.
+The lower one is used up by the car radio, but the upper one just contained a laughably small second glovebox.
+Then suddenly, I had an idea: My car is too old to calculate its gas mileage itself, so I might as well add in a device capable of doing that." />
+<meta property="og:url" content="http://robbi-blechdose.github.io/post/2019-10-27-02-car-gauge-unit/" />
+<meta property="og:site_name" content="Car Gauge Unit" />
+<meta property="og:image" content="">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2019-10-27 14:29:34 &#43;0100 CET" />
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="">
+
+
+<div class="container center">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    Robbi Blechdose
+  </div>
+</a>
+
+    </div>
+    <div class="menu-trigger">menu</div>
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/s-rc-bots_index">S-RC Bots</a></li>
+        
+      
+        
+          <li><a href="https://twitter.com/robbi_blechdose">Twitter</a></li>
+        
+      
+        
+          <li><a href="https://www.youtube.com/user/Therobbi2011/">YouTube</a></li>
+        
+      
+      
+    
+
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/s-rc-bots_index">S-RC Bots</a></li>
+      
+    
+      
+        <li><a href="https://twitter.com/robbi_blechdose">Twitter</a></li>
+      
+    
+      
+        <li><a href="https://www.youtube.com/user/Therobbi2011/">YouTube</a></li>
+      
+    
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="http://robbi-blechdose.github.io/post/2019-10-27-02-car-gauge-unit/">Car Gauge Unit</a></h1>
+  <div class="post-meta">
+      
+    <span class="post-date">
+      2019-10-27
+    </span>
+    
+    
+  </div>
+
+  
+
+  
+
+  <div class="post-content">
+    
+
+<h2 id="car-gauge-unit">Car Gauge Unit</h2>
+
+<h1 id="a-project-involving-arduino-3d-printing-and-my-car">A project involving Arduino, 3D-Printing and my car</h1>
+
+<p>This project requires a bit of background information: My car has two standard DIN slots.</p>
+
+<p>The lower one is used up by the car radio, but the upper one just contained a laughably small second glovebox.</p>
+
+<p>Then suddenly, I had an idea: My car is too old to calculate its gas mileage itself, so I might as well add in a device capable
+of doing that. And what better place to put it than into the spot where that glovebox sat?</p>
+
+<p><img src="/images/2019-10-27-02-car-gauge-unit/IMG_20190918_163656632.jpg" alt="The small glovebox" /></p>
+
+<p>Of course, an arduino with a display wouldn&rsquo;t take up all that space. So I came up with more things to add in.</p>
+
+<p>The most visible one is the voltmeter which is directly connected to the 12v grid of the car. Since it&rsquo;s unregulated, I can
+easily check the voltage from the battery when the engine is off, and the voltage of the alternator when the engine is running.</p>
+
+<p>Since I needed a 5v power source for the arduino anyway, I bought a power brick that was way overkill (it supplies up to 3A!)
+and added it in. Now I could power my Rasperry Pi Satnav (on top of the dashboard) from here too!
+The satnav doesn&rsquo;t need to always be on, so I added a switch. Another switch joined it, this time for selecting which horn I&rsquo;d
+like to use (I had a second one put in).
+Finally, I added a temperature display too.</p>
+
+<p>Building commenced:
+<img src="/images/2019-10-27-02-car-gauge-unit/IMG_20190831_183919459.jpg" alt="3D Printing the housing" /></p>
+
+<p>I 3D-printed the enclosure, only to find out it couldn&rsquo;t stand the heat of a car left in the sun. Also, it didn&rsquo;t fit very well.
+The final version I ended up using was the 3rd print, for which I used PETG filament becausee of its better ability to withstand
+high temperatures.</p>
+
+<p>The electronics looked like this at first:
+<img src="/images/2019-10-27-02-car-gauge-unit/IMG_20190831_183911549.jpg" alt="The first version of the board" /></p>
+
+<p>There was of course a problem with this approach: Everything was a tangled mess of wires.
+This led to some criticism and finally my decision to desolder everything and build a new board from scratch which had
+all the parts on it.</p>
+
+<p>I finalized the design to fit into the slot as well as possible, then added another gauge in (which I&rsquo;m planning on using
+as an acceleration display). The red retro labels for the switches were made with a very old labelmaker I had laying around.
+After all that work, here&rsquo;s the final result:</p>
+
+<p><img src="/images/2019-10-27-02-car-gauge-unit/IMG_20191007_083859141.jpg" alt="The final product" /></p>
+
+  </div>
+  
+  <div class="pagination">
+    <div class="pagination__title">
+      <span
+        class="pagination__title-h">Read other posts</span>
+      <hr />
+    </div>
+    <div class="pagination__buttons">
+      
+      <span class="button previous">
+        <a href="http://robbi-blechdose.github.io/post/2019-10-27-03-gb-j-compiler/">
+          <span class="button__icon">←</span>
+          <span class="button__text">GB-J Compiler released</span>
+        </a>
+      </span>
+      
+      
+      <span class="button next">
+        <a href="http://robbi-blechdose.github.io/post/2019-10-27-01-first-post/">
+          <span class="button__text">New Blog! 🎉</span>
+          <span class="button__icon">→</span>
+        </a>
+      </span>
+      
+    </div>
+  </div>
+  
+
+  
+
+</div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2019 Powered by <a href="http://gohugo.io">Hugo</a></span>
+    
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+<script src="http://robbi-blechdose.github.io/assets/main.js"></script>
+<script src="http://robbi-blechdose.github.io/assets/prism.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>
