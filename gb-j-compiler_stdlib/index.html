@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>GB-J Compiler: Standard Library Documentation :: Robbi Blechdose&#39;s Blog</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="0. Abbreviations    Abbreviation Description     Pos Position   VBK VRAM Bank   Ref. Reference to   N/o. Number of   BG Background    1. Standard Methods    Name Arguments Return Description     halt / / Puts the CPU into low-power modeuntil the next interrupt occurs.   waitVBlank / / Waits until a VBLank occurs."/>
+<meta name="keywords" content=""/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="https://robbi-blechdose.github.io/gb-j-compiler_stdlib/" />
+
+
+<link rel="stylesheet" href="https://robbi-blechdose.github.io/assets/style.css">
+
+
+
+
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://robbi-blechdose.github.io/img/apple-touch-icon-144-precomposed.png">
+
+<link rel="shortcut icon" href="https://robbi-blechdose.github.io/img/favicon/orange.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="GB-J Compiler: Standard Library Documentation :: Robbi Blechdose&#39;s Blog — " />
+<meta name="twitter:description" content="0. Abbreviations    Abbreviation Description     Pos Position   VBK VRAM Bank   Ref. Reference to   N/o. Number of   BG Background    1. Standard Methods    Name Arguments Return Description     halt / / Puts the CPU into low-power modeuntil the next interrupt occurs.   waitVBlank / / Waits until a VBLank occurs." />
+<meta name="twitter:site" content="https://robbi-blechdose.github.io/" />
+<meta name="twitter:creator" content="" />
+<meta name="twitter:image" content="">
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="GB-J Compiler: Standard Library Documentation :: Robbi Blechdose&#39;s Blog — ">
+<meta property="og:description" content="0. Abbreviations    Abbreviation Description     Pos Position   VBK VRAM Bank   Ref. Reference to   N/o. Number of   BG Background    1. Standard Methods    Name Arguments Return Description     halt / / Puts the CPU into low-power modeuntil the next interrupt occurs.   waitVBlank / / Waits until a VBLank occurs." />
+<meta property="og:url" content="https://robbi-blechdose.github.io/gb-j-compiler_stdlib/" />
+<meta property="og:site_name" content="GB-J Compiler: Standard Library Documentation" />
+<meta property="og:image" content="">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2019-11-05 09:45:54 &#43;0100 CET" />
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="">
+
+
+<div class="container full">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="../">
+  <div class="logo">
+    Robbi Blechdose
+  </div>
+</a>
+
+    </div>
+    <div class="menu-trigger">menu</div>
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="../s-rc-bots_index">S-RC Bots</a></li>
+        
+      
+        
+          <li><a href="https://twitter.com/robbi_blechdose">Twitter</a></li>
+        
+      
+        
+          <li><a href="https://www.youtube.com/user/Therobbi2011/">YouTube</a></li>
+        
+      
+      
+    
+
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="../s-rc-bots_index">S-RC Bots</a></li>
+      
+    
+      
+        <li><a href="https://twitter.com/robbi_blechdose">Twitter</a></li>
+      
+    
+      
+        <li><a href="https://www.youtube.com/user/Therobbi2011/">YouTube</a></li>
+      
+    
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="https://robbi-blechdose.github.io/gb-j-compiler_stdlib/">GB-J Compiler: Standard Library Documentation</a></h1>
+  <div class="post-meta">
+      
+    <span class="post-date">
+      2019-11-05
+    </span>
+    
+    
+  </div>
+
+  
+
+  
+
+  <div class="post-content">
+    
+
+<h2 id="0-abbreviations">0. Abbreviations</h2>
+
+<table>
+<thead>
+<tr>
+<th>Abbreviation</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Pos</td>
+<td>Position</td>
+</tr>
+
+<tr>
+<td>VBK</td>
+<td>VRAM Bank</td>
+</tr>
+
+<tr>
+<td>Ref.</td>
+<td>Reference to</td>
+</tr>
+
+<tr>
+<td>N/o.</td>
+<td>Number of</td>
+</tr>
+
+<tr>
+<td>BG</td>
+<td>Background</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="1-standard-methods">1. Standard Methods</h2>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Arguments</th>
+<th>Return</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>halt</td>
+<td>/</td>
+<td>/</td>
+<td>Puts the CPU into low-power modeuntil the next interrupt occurs.</td>
+</tr>
+
+<tr>
+<td>waitVBlank</td>
+<td>/</td>
+<td>/</td>
+<td>Waits until a VBLank occurs. VRAM may be modified then.</td>
+</tr>
+
+<tr>
+<td>enableInterrupts</td>
+<td>/</td>
+<td>/</td>
+<td>Enables interrupts.</td>
+</tr>
+
+<tr>
+<td>disableInterrupts</td>
+<td>/</td>
+<td>/</td>
+<td>Disables interrupts.</td>
+</tr>
+
+<tr>
+<td>softwareBreak</td>
+<td>/</td>
+<td>/</td>
+<td>Adds an <code>ld b, b</code> into the code on which BGB can break.</td>
+</tr>
+
+<tr>
+<td>switchBank</td>
+<td>Bank Number</td>
+<td>/</td>
+<td>Switches Bank X to the given number. Possible values are 0-255 for MBC5, 1-127 for MBC3 and 1-127 excluding banks 32, 64 and 96 for MBC1.</td>
+</tr>
+
+<tr>
+<td>copyDMARoutine</td>
+<td>/</td>
+<td>/</td>
+<td>Allows usage of sprites.</td>
+</tr>
+
+<tr>
+<td>clearOAM</td>
+<td>/</td>
+<td>/</td>
+<td>Clears the sprite memory, otherwise garbage may appear on the screen.</td>
+</tr>
+
+<tr>
+<td>dmaTransfer</td>
+<td>/</td>
+<td>/</td>
+<td>Transfers sprite data. Should always be called in VBlank.</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="2-graphics">2. Graphics</h2>
+
+<h4 id="1-1-sprites">1.1. Sprites</h4>
+
+<hr />
+
+<p>Location: <code>stdlib/Graphics/Sprites.asm</code></p>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Arguments</th>
+<th>Return</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>setSpritePosition</td>
+<td>Sprite Index, X Pos, Y Pos</td>
+<td>/</td>
+<td>Sets the position of the sprite. Note: 0,0 is outside the screen area. The top-left corner of the screen is at 8, 16.</td>
+</tr>
+
+<tr>
+<td>setSpriteTile</td>
+<td>Sprite Index, Tile Index</td>
+<td>/</td>
+<td>Sets the tile of the sprite.</td>
+</tr>
+
+<tr>
+<td>setSpriteAttributes</td>
+<td>Sprite Index, Sprite Attribute</td>
+<td>/</td>
+<td>Sets the attributes of the sprite. See the [Sprite Attribute Table]() on how to create the attribute byte.</td>
+</tr>
+</tbody>
+</table>
+
+<h6 id="sprite-attribute-table">Sprite Attribute Table:</h6>
+
+<table>
+<thead>
+<tr>
+<th>Bit</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>7</td>
+<td>Sprite &lt;-&gt; Background Priority (0 = Sprite above Background)</td>
+</tr>
+
+<tr>
+<td>6</td>
+<td>Y Flip (0 = Normal)</td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>X Flip (0 = Normal)</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>Palette Index DMG-Mode</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>VRAM-Bank of the tile</td>
+</tr>
+
+<tr>
+<td>2-0</td>
+<td>Palette Index CGB-Mode</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="1-2-tiles-background-and-window">1.2. Tiles, Background and Window</h4>
+
+<hr />
+
+<p>Location: <code>stdlib/Graphics/Tiles.asm</code></p>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Arguments</th>
+<th>Return</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>loadTiles</td>
+<td>VBK, Index, N/o. tiles, Ref. tile data</td>
+<td>/</td>
+<td>Loads tiles from the reference into VRAM. The index is the location in VRAM where the tiles are placed.</td>
+</tr>
+
+<tr>
+<td>setBGTile</td>
+<td>VBK, Tile Index, X Pos, Y Pos</td>
+<td>/</td>
+<td>Places a single tile on the BG map at the given position. If VRAM Bank 1 is used, attributes for the tile are set instead.</td>
+</tr>
+
+<tr>
+<td>setWinTile</td>
+<td>VBK, Tile Index, X Pos, Y Pos</td>
+<td>/</td>
+<td>Places a single tile on the window map at the given position. If VBK 1 is used, attributes for the tile are set instead.</td>
+</tr>
+
+<tr>
+<td>loadBGMap</td>
+<td>VBK, Ref. map data, X Pos, Y Pos, X Size, Y Size</td>
+<td>/</td>
+<td>Loads a BG map and places it at the position and uses the given Size. If VBK 1 is used, attributes for the tiles are set instead.</td>
+</tr>
+
+<tr>
+<td>loadWinMap</td>
+<td>VBK, Ref. map data, X Pos, Y Pos, X Size, Y Size</td>
+<td>/</td>
+<td>Loads a window map and places it at the position and uses the given Size. If VBK 1 is used, attributes for the tiles are set instead.</td>
+</tr>
+
+<tr>
+<td>setBGScroll</td>
+<td>X Scroll, Y Scroll</td>
+<td>/</td>
+<td>Loads the BG scrolling registers with the given values.</td>
+</tr>
+
+<tr>
+<td>setWinPosition</td>
+<td>X Pos, Y Pos</td>
+<td>/</td>
+<td>Places the window at the given position. Note: 0, 7 is the top-left corner of the screen.</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="1-3-lcd-control">1.3. LCD control</h4>
+
+<hr />
+
+<p>Location: <code>stdlib/Graphics/LCD.asm</code></p>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Arguments</th>
+<th>Return</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>lcdOff</td>
+<td>/</td>
+<td>/</td>
+<td>Turns off the LCD. It turns white for the user. VRAM access is now always possible.</td>
+</tr>
+
+<tr>
+<td>lcdOn</td>
+<td>LCD On/Off, Window Map Address, BG On/off, BG Tile Data Address, BG Map Address, Sprite Size, Sprites On/Off, BG On/Off</td>
+<td>/</td>
+<td>Turns on the LCD with the given arguments.</td>
+</tr>
+
+<tr>
+<td>loadPalettes</td>
+<td>Is Sprite Palette?, Ref. Palette</td>
+<td>Loads palettes into VRAM. <em>CGB only.</em></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="2-miscellaneous">2. Miscellaneous</h2>
+
+<h4 id="2-1-utils">2.1. Utils</h4>
+
+<hr />
+
+<p>Location: <code>stdlib/Utils.asm</code></p>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Arguments</th>
+<th>Return</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>readPad</td>
+<td>/</td>
+<td>/</td>
+<td>Reads the D-Pad and all buttons and saves the current status internally.</td>
+</tr>
+
+<tr>
+<td>isButtonPressed</td>
+<td>Button Bitmask</td>
+<td>1 = Button is pressed</td>
+<td>Checks if a button is pressed.</td>
+</tr>
+
+<tr>
+<td>wasButtonPressed</td>
+<td>Button Bitmask</td>
+<td>1 = Button was pressed</td>
+<td>Checks if a button was pressed in the last frame before the current one.</td>
+</tr>
+
+<tr>
+<td>switchSpeed</td>
+<td>/</td>
+<td>/</td>
+<td>Switches between Single- and Double-Speed Mode. <em>CGB only.</em></td>
+</tr>
+</tbody>
+</table>
+
+<h6 id="button-bitmask-table">Button Bitmask Table</h6>
+
+<table>
+<thead>
+<tr>
+<th>Bit</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>7</td>
+<td>D-Pad &darr;</td>
+</tr>
+
+<tr>
+<td>6</td>
+<td>D-Pad &uarr;</td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>D-Pad &larr;</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>D-Pad &rarr;</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>Start</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>Select</td>
+</tr>
+
+<tr>
+<td>1</td>
+<td>B</td>
+</tr>
+
+<tr>
+<td>0</td>
+<td>A</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="2-2-gameboy-printer-support">2.2. GameBoy Printer support</h4>
+
+<hr />
+
+<p>Location: <code>stdlib/GBPrinter.asm</code></p>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Arguments</th>
+<th>Return</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>initPrinter</td>
+<td>/</td>
+<td>1 = Connection OK</td>
+<td>Sends an init packet to the printer and waits for an answer.</td>
+</tr>
+
+<tr>
+<td>transferData</td>
+<td>/</td>
+<td>/</td>
+<td>Sends the contents of the buffer to the printer in multiple frames. The buffer is the top left 20x18 tiles of the window layer.</td>
+</tr>
+
+<tr>
+<td>getStatus</td>
+<td>/</td>
+<td>Printer Status</td>
+<td>Asks the printer for its status and returns the answer byte.</td>
+</tr>
+
+<tr>
+<td>startPrint</td>
+<td>/</td>
+<td>/</td>
+<td>Attempts to start a print. Only works if enough data has been transferred beforehand.</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="2-3-simple-text-display">2.3. Simple text display</h4>
+
+<hr />
+
+<p>Location: <code>stdlib/Graphics/ScreenPrinter.asm</code><br />
+Disclaimer: Should only be used for testing purposes due to the amount of VRAM and CPU time used.</p>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Arguments</th>
+<th>Return</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>loadCharset</td>
+<td>/</td>
+<td>/</td>
+<td>Loads the charset into VRAM. It contains letters <code>A</code> - <code>Z</code>, numbers <code>0</code> - <code>9</code> and the special characters <code>?,.!-</code>.</td>
+</tr>
+
+<tr>
+<td>print</td>
+<td>X Pos, Y Pos, Ref. Text</td>
+<td>/</td>
+<td>Prints text to the screen at the given position. Note: The position is in tiles here.</td>
+</tr>
+
+<tr>
+<td>printNumber</td>
+<td>X Pos, Y Pos, char</td>
+<td>/</td>
+<td>Prints a number to the screen at the given position. Note: The position is in tiles here.</td>
+</tr>
+</tbody>
+</table>
+
+  </div>
+  
+  <div class="pagination">
+    <div class="pagination__title">
+      <span
+        class="pagination__title-h">Read other posts</span>
+      <hr />
+    </div>
+    <div class="pagination__buttons">
+      
+      
+      <span class="button next">
+        <a href="https://robbi-blechdose.github.io/s-rc-bots_screenshots/">
+          <span class="button__text">S-RC Bots Screenshots</span>
+          <span class="button__icon">→</span>
+        </a>
+      </span>
+      
+    </div>
+  </div>
+  
+
+  
+
+</div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2019 Powered by <a href="http://gohugo.io">Hugo</a></span>
+    
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+<script src="https://robbi-blechdose.github.io/assets/main.js"></script>
+<script src="https://robbi-blechdose.github.io/assets/prism.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>
