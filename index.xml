@@ -17,7 +17,8 @@
       <pubDate>Tue, 05 Nov 2019 09:45:54 +0100</pubDate>
       
       <guid>https://robbi-blechdose.github.io/gb-j-compiler_stdlib/</guid>
-      <description>0. Abbreviations    Abbreviation Description     Pos Position   VBK VRAM Bank   Ref. Reference to   N/o. Number of   BG Background    1. Standard Methods    Name Arguments Return Description     halt / / Puts the CPU into low-power modeuntil the next interrupt occurs.   waitVBlank / / Waits until a VBLank occurs.</description>
+      <description>0. Abbreviations    Abbreviation Description     Pos Position   VBK VRAM Bank   num Number of   spr Sprite   BG Background    Note: ref is currently not a standard data type, but must be provided in one of the two following forms:
+ Asm.label for referencing a label in assembly code, which may be included as a generated data file or as inline assembly</description>
     </item>
     
     <item>
