@@ -22,6 +22,18 @@
     </item>
     
     <item>
+      <title>GB-J Compiler: The language GB-J</title>
+      <link>https://robbi-blechdose.github.io/gb-j-compiler_lang/</link>
+      <pubDate>Tue, 05 Nov 2019 09:45:47 +0100</pubDate>
+      
+      <guid>https://robbi-blechdose.github.io/gb-j-compiler_lang/</guid>
+      <description>1. Introduction The language &amp;ldquo;GB-J&amp;rdquo; is the one this compiler translates.
+Its syntax borrows from C and Java for basic concepts, but differs in several aspects in order to make the language fit the target device better - the GameBoy.
+2.1. Sections and Classes GB-J has two basic concepts for organising your project:
+ sections, which hold statically allocated variables and the code accessing them classes, from which objects may be instantiated at runtime  Sections are faster than classes by several orders of magnitude, since memory accesses can be done directly, as opposed to having to calculate addresses for classes.</description>
+    </item>
+    
+    <item>
       <title>S-RC Bots Screenshots</title>
       <link>https://robbi-blechdose.github.io/s-rc-bots_screenshots/</link>
       <pubDate>Wed, 30 Oct 2019 13:37:18 +0100</pubDate>

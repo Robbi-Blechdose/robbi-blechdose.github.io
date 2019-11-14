@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>GB-J Compiler: The language GB-J :: Robbi Blechdose&#39;s Blog</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="1. Introduction The language &amp;ldquo;GB-J&amp;rdquo; is the one this compiler translates.
+Its syntax borrows from C and Java for basic concepts, but differs in several aspects in order to make the language fit the target device better - the GameBoy.
+2.1. Sections and Classes GB-J has two basic concepts for organising your project:
+ sections, which hold statically allocated variables and the code accessing them classes, from which objects may be instantiated at runtime  Sections are faster than classes by several orders of magnitude, since memory accesses can be done directly, as opposed to having to calculate addresses for classes."/>
+<meta name="keywords" content=""/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="https://robbi-blechdose.github.io/gb-j-compiler_lang/" />
+
+
+<link rel="stylesheet" href="https://robbi-blechdose.github.io/assets/style.css">
+
+
+
+
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://robbi-blechdose.github.io/img/apple-touch-icon-144-precomposed.png">
+
+<link rel="shortcut icon" href="https://robbi-blechdose.github.io/img/favicon/orange.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="GB-J Compiler: The language GB-J :: Robbi Blechdose&#39;s Blog — " />
+<meta name="twitter:description" content="1. Introduction The language &amp;ldquo;GB-J&amp;rdquo; is the one this compiler translates.
+Its syntax borrows from C and Java for basic concepts, but differs in several aspects in order to make the language fit the target device better - the GameBoy.
+2.1. Sections and Classes GB-J has two basic concepts for organising your project:
+ sections, which hold statically allocated variables and the code accessing them classes, from which objects may be instantiated at runtime  Sections are faster than classes by several orders of magnitude, since memory accesses can be done directly, as opposed to having to calculate addresses for classes." />
+<meta name="twitter:site" content="https://robbi-blechdose.github.io/" />
+<meta name="twitter:creator" content="" />
+<meta name="twitter:image" content="">
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="GB-J Compiler: The language GB-J :: Robbi Blechdose&#39;s Blog — ">
+<meta property="og:description" content="1. Introduction The language &amp;ldquo;GB-J&amp;rdquo; is the one this compiler translates.
+Its syntax borrows from C and Java for basic concepts, but differs in several aspects in order to make the language fit the target device better - the GameBoy.
+2.1. Sections and Classes GB-J has two basic concepts for organising your project:
+ sections, which hold statically allocated variables and the code accessing them classes, from which objects may be instantiated at runtime  Sections are faster than classes by several orders of magnitude, since memory accesses can be done directly, as opposed to having to calculate addresses for classes." />
+<meta property="og:url" content="https://robbi-blechdose.github.io/gb-j-compiler_lang/" />
+<meta property="og:site_name" content="GB-J Compiler: The language GB-J" />
+<meta property="og:image" content="">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2019-11-05 09:45:47 &#43;0100 CET" />
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="">
+
+
+<div class="container full">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="../">
+  <div class="logo">
+    Robbi Blechdose
+  </div>
+</a>
+
+    </div>
+    <div class="menu-trigger">menu</div>
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="../s-rc-bots_index">S-RC Bots</a></li>
+        
+      
+        
+          <li><a href="https://twitter.com/robbi_blechdose">Twitter</a></li>
+        
+      
+        
+          <li><a href="https://www.youtube.com/user/Therobbi2011/">YouTube</a></li>
+        
+      
+      
+    
+
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="../s-rc-bots_index">S-RC Bots</a></li>
+      
+    
+      
+        <li><a href="https://twitter.com/robbi_blechdose">Twitter</a></li>
+      
+    
+      
+        <li><a href="https://www.youtube.com/user/Therobbi2011/">YouTube</a></li>
+      
+    
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="https://robbi-blechdose.github.io/gb-j-compiler_lang/">GB-J Compiler: The language GB-J</a></h1>
+  <div class="post-meta">
+      
+    <span class="post-date">
+      2019-11-05
+    </span>
+    
+    
+  </div>
+
+  
+
+  
+
+  <div class="post-content">
+    
+
+<h2 id="1-introduction">1. Introduction</h2>
+
+<p>The language &ldquo;GB-J&rdquo; is the one this compiler translates.<br />
+Its syntax borrows from C and Java for basic concepts, but differs in several aspects in order to make the language fit the target device better - the GameBoy.</p>
+
+<h2 id="2-1-sections-and-classes">2.1. Sections and Classes</h2>
+
+<p>GB-J has two basic concepts for organising your project:</p>
+
+<ul>
+<li>sections, which hold statically allocated variables and the code accessing them</li>
+<li>classes, from which objects may be instantiated at runtime</li>
+</ul>
+
+<p>Sections are faster than classes by several orders of magnitude, since memory accesses can be done directly, as opposed to having to calculate addresses for classes.</p>
+
+<p>For illustration, one example of a section and one of a class:</p>
+
+<pre><code class="language-java">section Test
+{
+    package &quot;ROM0&quot;;
+    
+    void method()
+    {
+        //Some comment
+    }
+}
+
+class TestObject
+{
+    package &quot;ROMX, BANK[2]&quot;;
+    
+    void method()
+    {
+        //Some other comment
+    }
+}
+</code></pre>
+
+<p>The package declarations have to be located at the top of the section or class, they determine where the final result will be located in the ROM.<br />
+It is possible to place a section/class in the fixed <code>ROM0</code> bank, or in one of the switchable banks. In that case, the syntax <code>ROMX, BANK[Z]</code> is used,
+where <code>Z</code> is the bank number.<br />
+Possible values are documented in the switchBank method of the <a href="../gb-j-compiler_stdlib">standard library</a>.</p>
+
+<p>One section is required to be in ROM0 and contain a <code>main</code> method, which is the program&rsquo;s entry point.</p>
+
+<h2 id="2-2-imports">2.2. Imports</h2>
+
+<p>In order to use multiple files within a projects, they need to be imported from the main file.<br />
+Both <code>.gbj</code>-files and assembly files in RGBDS syntax are allowed.
+For RGBDS files, the extension is irrelevant (<code>.asm</code> and <code>.z80</code> are commonly used, although one should note that the CPU is <em>not</em> a Z80).</p>
+
+<p>Imports are placed at the top of a file, above the section or class declaration.</p>
+
+<p>An example to demonstrate the use of the import directive:</p>
+
+<pre><code>import &quot;Tiles.z80&quot;;
+import &quot;SpriteHandler.asm&quot;;
+import &quot;Enemies/EnemyAI.gbj&quot;;
+</code></pre>
+
+<h2 id="2-3-data-types">2.3. Data Types</h2>
+
+<p>GB-J comes with 2 basic data types:</p>
+
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Length</th>
+<th>signed range</th>
+<th>unsigned range</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>char</td>
+<td>8 bit</td>
+<td>0 - 255</td>
+<td>-128 - 127</td>
+</tr>
+
+<tr>
+<td>int</td>
+<td>16 bit</td>
+<td>0 - 65535</td>
+<td>-32768 - 32767</td>
+</tr>
+</tbody>
+</table>
+
+<p>Signed and unsigned values are stored identically, it is solely up to the programmer to distinguish the types.<br />
+For example, this is possible, albeit nonsensical:</p>
+
+<pre><code class="language-java">char x;
+x = -5;
+x = 200;
+</code></pre>
+
+<p>In addition to these types, object types are also available. They use 2 bytes for the reference as well as heap memory for the actual object contents.<br />
+Note that heap memory allocation and deallocation is slow, thus objects should be used carefully!</p>
+
+<h2 id="2-4-arrays">2.4. Arrays</h2>
+
+<p>GB-J also allows one-dimensional arrays (although support for multidimensional arrays is planned for the future).
+They use the following syntax:</p>
+
+<pre><code class="language-java">int xyz[8];
+
+void test()
+{
+    int i;
+    i = 2;
+    xyz[i] = 564;
+}
+</code></pre>
+
+<p>It is up to the programmer to ensure the array indices are correct! GB-J does not have any exception handling and will simply access incorrect areas of memory!</p>
+
+<h2 id="2-5-control-structures">2.5. Control Structures</h2>
+
+<p>There are 3 basic control structures in GB-J: <code>if</code>, <code>while</code> and <code>switch</code>.<br />
+Here are some examples:</p>
+
+<pre><code class="language-java">if(x &gt; 10)
+{
+    //Do stuff
+}
+else if(x &gt;= 20)
+{
+    //Do something else
+}
+else
+{
+    //Do something entirely different
+}
+</code></pre>
+
+<pre><code class="language-java">char x;
+x = 0;
+while(x &lt; 5)
+{
+    //Do stuff
+    x = x + 1;
+}
+</code></pre>
+
+<p>Note: For both <code>if</code> and <code>while</code>, a comparison is always required!</p>
+
+<pre><code class="language-java">switch(i):
+{
+    case 0:
+    {
+        //Do stuff
+    }
+    case 1:
+    {
+        //Do something else
+    }
+}
+</code></pre>
+
+<p>Note: <code>switch</code> does neither require nor support <code>break</code> statements like other languages do. In addition to that, the braces are required.<br />
+The <code>switch</code> statements are compiled into jump tables, meaning it only makes sense to use them if the different cases are reasonably close to each other.<br />
+Finally, the indices are limited to a maximum of 8 bits. If a 16-bit index is supplied, the high 8 bits are discarded.</p>
+
+<h2 id="2-6-objects">2.6. Objects</h2>
+
+<p>Objects are used like this:</p>
+
+<pre><code class="language-java">TestObj test;
+test = new TestObj(4, 2);
+test.method();
+test.destroy();
+</code></pre>
+
+<p>Note that GB-J does not have a garbage collector, thus <code>destroy()</code> must be called manually!</p>
+
+<p>The classes themselves look like this:</p>
+
+<pre><code class="language-java">class TestObj
+{
+    char a;
+    char b;
+    
+    //Constructor
+    TestObj(char x, char y)
+    {
+        a = x;
+        b = y;
+    }
+    
+    void method()
+    {
+        a = b - a;
+    }
+}
+</code></pre>
+
+<p>The destructor is part of the language and cannot be overriden.</p>
+
+<h2 id="2-7-including-assembly-snippets">2.7. Including Assembly Snippets</h2>
+
+<p>GB-J allows adding assembly snippets in RGBDS syntax directly into the code.
+The code is wrapped in an <code>Asm{}</code> statement and each line is wrapped in <code>&quot;&quot;</code>.<br />
+Example:</p>
+
+<pre><code class="language-java">Asm
+{
+    &quot;ld a, 12&quot;
+    &quot;add b&quot;
+}
+</code></pre>
+
+  </div>
+  
+  <div class="pagination">
+    <div class="pagination__title">
+      <span
+        class="pagination__title-h">Read other posts</span>
+      <hr />
+    </div>
+    <div class="pagination__buttons">
+      
+      <span class="button previous">
+        <a href="https://robbi-blechdose.github.io/gb-j-compiler_stdlib/">
+          <span class="button__icon">←</span>
+          <span class="button__text">GB-J Compiler: Standard Library Documentation</span>
+        </a>
+      </span>
+      
+      
+      <span class="button next">
+        <a href="https://robbi-blechdose.github.io/s-rc-bots_screenshots/">
+          <span class="button__text">S-RC Bots Screenshots</span>
+          <span class="button__icon">→</span>
+        </a>
+      </span>
+      
+    </div>
+  </div>
+  
+
+  
+
+</div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2019 Powered by <a href="http://gohugo.io">Hugo</a></span>
+    
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+<script src="https://robbi-blechdose.github.io/assets/main.js"></script>
+<script src="https://robbi-blechdose.github.io/assets/prism.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>
