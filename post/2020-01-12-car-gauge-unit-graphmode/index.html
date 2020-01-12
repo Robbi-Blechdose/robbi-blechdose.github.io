@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Car Gauge Unit: Graph Mode :: Robbi Blechdose&#39;s Blog</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="Car Gauge Unit: Graph Mode The small screen at the right-hand side of the unit allows me to enter some data whenever I fill up the tank of my car:
+ The amount of fuel I put in (in litres) How much the fuel cost (in € per litre) The total mileage of the car  With this, it calculates the gas mileage (in litres / 100km). However, I only had a total average as well as a &amp;ldquo;best ever&amp;rdquo; value."/>
+<meta name="keywords" content=""/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="https://robbi-blechdose.github.io/post/2020-01-12-car-gauge-unit-graphmode/" />
+
+
+<link rel="stylesheet" href="https://robbi-blechdose.github.io/assets/style.css">
+
+
+
+
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://robbi-blechdose.github.io/img/apple-touch-icon-144-precomposed.png">
+
+<link rel="shortcut icon" href="https://robbi-blechdose.github.io/img/favicon/orange.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Car Gauge Unit: Graph Mode :: Robbi Blechdose&#39;s Blog — " />
+<meta name="twitter:description" content="Car Gauge Unit: Graph Mode The small screen at the right-hand side of the unit allows me to enter some data whenever I fill up the tank of my car:
+ The amount of fuel I put in (in litres) How much the fuel cost (in € per litre) The total mileage of the car  With this, it calculates the gas mileage (in litres / 100km). However, I only had a total average as well as a &amp;ldquo;best ever&amp;rdquo; value." />
+<meta name="twitter:site" content="https://robbi-blechdose.github.io/" />
+<meta name="twitter:creator" content="" />
+<meta name="twitter:image" content="">
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Car Gauge Unit: Graph Mode :: Robbi Blechdose&#39;s Blog — ">
+<meta property="og:description" content="Car Gauge Unit: Graph Mode The small screen at the right-hand side of the unit allows me to enter some data whenever I fill up the tank of my car:
+ The amount of fuel I put in (in litres) How much the fuel cost (in € per litre) The total mileage of the car  With this, it calculates the gas mileage (in litres / 100km). However, I only had a total average as well as a &amp;ldquo;best ever&amp;rdquo; value." />
+<meta property="og:url" content="https://robbi-blechdose.github.io/post/2020-01-12-car-gauge-unit-graphmode/" />
+<meta property="og:site_name" content="Car Gauge Unit: Graph Mode" />
+<meta property="og:image" content="">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2020-01-12 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="">
+
+
+<div class="container full">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="../../">
+  <div class="logo">
+    Robbi Blechdose
+  </div>
+</a>
+
+    </div>
+    <div class="menu-trigger">menu</div>
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="../../s-rc-bots_index">S-RC Bots</a></li>
+        
+      
+        
+          <li><a href="https://twitter.com/robbi_blechdose">Twitter</a></li>
+        
+      
+        
+          <li><a href="https://www.youtube.com/user/Therobbi2011/">YouTube</a></li>
+        
+      
+      
+    
+
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="../../s-rc-bots_index">S-RC Bots</a></li>
+      
+    
+      
+        <li><a href="https://twitter.com/robbi_blechdose">Twitter</a></li>
+      
+    
+      
+        <li><a href="https://www.youtube.com/user/Therobbi2011/">YouTube</a></li>
+      
+    
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="https://robbi-blechdose.github.io/post/2020-01-12-car-gauge-unit-graphmode/">Car Gauge Unit: Graph Mode</a></h1>
+  <div class="post-meta">
+      
+    <span class="post-date">
+      2020-01-12
+    </span>
+    
+    
+  </div>
+
+  
+
+  
+
+  <div class="post-content">
+    
+
+<h2 id="car-gauge-unit-graph-mode">Car Gauge Unit: Graph Mode</h2>
+
+<p>The small screen at the right-hand side of the unit allows me to enter some data whenever I fill up the tank of my car:</p>
+
+<ul>
+<li>The amount of fuel I put in (in litres)</li>
+<li>How much the fuel cost (in € per litre)</li>
+<li>The total mileage of the car</li>
+</ul>
+
+<p>With this, it calculates the gas mileage (in litres / 100km). However, I only had a total average as well as a &ldquo;best ever&rdquo; value.
+The data I entered allowed for more though, so I added this new mode:
+It now saves the last 10 values entered, thus allowing me to plot two graphs, one for gas mileage (yellow) and one for the price of the fuel (red).</p>
+
+<p><img src="../../images/2020-01-12-car-gauge-unit-graphmode/IMG_20200112_114700945.jpg" alt="The graph mode display" width="50%"/></p>
+
+<p>If I add an eleventh value, the rest are shifted back, making the graph shift left over time. Of course, the 10 isn&rsquo;t a hardcoded value,
+so if I ever feel the need to display 20 data points instead, I can just change the constant in the code.
+However, the saved data changes too, meaning I&rsquo;ll have to add the new 10 entries, it won&rsquo;t remember the ones that were shifted out of the display.</p>
+
+<p>I also finally got around to adding some 3d-printed covers for the 6 buttons. They have symbols on top so you know which button does what.</p>
+
+<p>That&rsquo;s it for this time, I hope you enjoyed reading!</p>
+
+  </div>
+  
+  <div class="pagination">
+    <div class="pagination__title">
+      <span
+        class="pagination__title-h">Read other posts</span>
+      <hr />
+    </div>
+    <div class="pagination__buttons">
+      
+      
+      <span class="button next">
+        <a href="https://robbi-blechdose.github.io/post/2019-10-27-03-gb-j-compiler/">
+          <span class="button__text">GB-J Compiler released</span>
+          <span class="button__icon">→</span>
+        </a>
+      </span>
+      
+    </div>
+  </div>
+  
+
+  
+
+</div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2020 Powered by <a href="http://gohugo.io">Hugo</a></span>
+    
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+<script src="https://robbi-blechdose.github.io/assets/main.js"></script>
+<script src="https://robbi-blechdose.github.io/assets/prism.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

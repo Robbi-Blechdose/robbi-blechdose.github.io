@@ -6,10 +6,20 @@
     <description>Recent content on Robbi Blechdose&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 05 Nov 2019 09:45:54 +0100</lastBuildDate>
+    <lastBuildDate>Sun, 12 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://robbi-blechdose.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Car Gauge Unit: Graph Mode</title>
+      <link>https://robbi-blechdose.github.io/post/2020-01-12-car-gauge-unit-graphmode/</link>
+      <pubDate>Sun, 12 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://robbi-blechdose.github.io/post/2020-01-12-car-gauge-unit-graphmode/</guid>
+      <description>Car Gauge Unit: Graph Mode The small screen at the right-hand side of the unit allows me to enter some data whenever I fill up the tank of my car:
+ The amount of fuel I put in (in litres) How much the fuel cost (in € per litre) The total mileage of the car  With this, it calculates the gas mileage (in litres / 100km). However, I only had a total average as well as a &amp;ldquo;best ever&amp;rdquo; value.</description>
+    </item>
     
     <item>
       <title>GB-J Compiler: Standard Library Documentation</title>
@@ -30,7 +40,7 @@
       <description>1. Introduction The language &amp;ldquo;GB-J&amp;rdquo; is the one this compiler translates.
 Its syntax borrows from C and Java for basic concepts, but differs in several aspects in order to make the language fit the target device better - the GameBoy.
 2.1. Sections and Classes GB-J has two basic concepts for organising your project:
- sections, which hold statically allocated variables and the code accessing them classes, from which objects may be instantiated at runtime  Sections are faster than classes by several orders of magnitude, since memory accesses can be done directly, as opposed to having to calculate addresses for classes.</description>
+ sections, which hold statically allocated variables and the code accessing them classes, from which objects may be instantiated at runtime  Sections are faster than classes by several orders of magnitude, since memory accesses can be done directly, as opposed to having to calculate heap addresses for classes.</description>
     </item>
     
     <item>

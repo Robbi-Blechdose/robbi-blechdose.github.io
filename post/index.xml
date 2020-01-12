@@ -6,10 +6,20 @@
     <description>Recent content in Posts on Robbi Blechdose&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 27 Oct 2019 22:05:42 +0100</lastBuildDate>
+    <lastBuildDate>Sun, 12 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://robbi-blechdose.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Car Gauge Unit: Graph Mode</title>
+      <link>https://robbi-blechdose.github.io/post/2020-01-12-car-gauge-unit-graphmode/</link>
+      <pubDate>Sun, 12 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://robbi-blechdose.github.io/post/2020-01-12-car-gauge-unit-graphmode/</guid>
+      <description>Car Gauge Unit: Graph Mode The small screen at the right-hand side of the unit allows me to enter some data whenever I fill up the tank of my car:
+ The amount of fuel I put in (in litres) How much the fuel cost (in € per litre) The total mileage of the car  With this, it calculates the gas mileage (in litres / 100km). However, I only had a total average as well as a &amp;ldquo;best ever&amp;rdquo; value.</description>
+    </item>
     
     <item>
       <title>GB-J Compiler released</title>
