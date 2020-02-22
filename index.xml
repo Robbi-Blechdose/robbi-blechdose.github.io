@@ -6,10 +6,20 @@
     <description>Recent content on Robbi Blechdose&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 12 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 22 Feb 2020 11:25:46 +0100</lastBuildDate>
     
 	<atom:link href="https://robbi-blechdose.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>GameBoy Color Game &#34;Robbi&#34;</title>
+      <link>https://robbi-blechdose.github.io/post/2020-02-22-gbc-robbi/</link>
+      <pubDate>Sat, 22 Feb 2020 11:25:46 +0100</pubDate>
+      
+      <guid>https://robbi-blechdose.github.io/post/2020-02-22-gbc-robbi/</guid>
+      <description>&amp;ldquo;Robbi&amp;rdquo; is a game I&amp;rsquo;ve been working on for a while now. It&amp;rsquo;s written in raw assembly for the GameBoy Color. Though it&amp;rsquo;s currently running on an emulator for easy development, it would run on real hardware as well.
+Right now, there isn&amp;rsquo;t much in terms of content as I&amp;rsquo;m still creating the basic systems. However, a few basics are done: You can walk (or rather drive) around the map, which has a maximum size of 128x128 tiles.</description>
+    </item>
     
     <item>
       <title>Car Gauge Unit: Graph Mode</title>
