@@ -6,19 +6,17 @@
     <description>Recent content in Posts on Robbi Blechdose&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 27 Apr 2020 20:44:22 +0200</lastBuildDate>
-    
-	<atom:link href="https://robbi-blechdose.github.io/post/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 08 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://robbi-blechdose.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>K12 KITT: The Scanner</title>
       <link>https://robbi-blechdose.github.io/post/2020-04-27-k12-kitt-scanner/</link>
       <pubDate>Mon, 27 Apr 2020 20:44:22 +0200</pubDate>
       
       <guid>https://robbi-blechdose.github.io/post/2020-04-27-k12-kitt-scanner/</guid>
-      <description>I&amp;rsquo;ve (probably) been watching way too much Knight Rider recently. As a result, I&amp;rsquo;ve started modifying my car. It&amp;rsquo;s by no means a KITT, or even a Trans Am. In fact, it&amp;rsquo;s a Nissan Micra K12.
-The first thing I did was add the famous scanner: The micra has a handy little space between the hood and the front bumper, perfect for a scanner. The problem is that that space is everything but big.</description>
+      <description>I&amp;rsquo;ve (probably) been watching way too much Knight Rider recently. As a result, I&amp;rsquo;ve started modifying my car. \
+It&amp;rsquo;s by no means a KITT, or even a Trans Am. In fact, it&amp;rsquo;s a Nissan Micra K12.
+The first thing I did was add the famous scanner: \
+The micra has a handy little space between the hood and the front bumper, perfect for a scanner. The problem is that that space is everything but big.</description>
     </item>
     
     <item>
@@ -28,7 +26,8 @@ The first thing I did was add the famous scanner: The micra has a handy little s
       
       <guid>https://robbi-blechdose.github.io/post/2020-02-22-gbc-robbi/</guid>
       <description>&amp;ldquo;Robbi&amp;rdquo; is a game I&amp;rsquo;ve been working on for a while now. It&amp;rsquo;s written in raw assembly for the GameBoy Color. Though it&amp;rsquo;s currently running on an emulator for easy development, it would run on real hardware as well.
-Right now, there isn&amp;rsquo;t much in terms of content as I&amp;rsquo;m still creating the basic systems. However, a few basics are done: You can walk (or rather drive) around the map, which has a maximum size of 128x128 tiles.</description>
+Right now, there isn&amp;rsquo;t much in terms of content as I&amp;rsquo;m still creating the basic systems. However, a few basics are done: \
+You can walk (or rather drive) around the map, which has a maximum size of 128x128 tiles.</description>
     </item>
     
     <item>
@@ -47,9 +46,9 @@ Right now, there isn&amp;rsquo;t much in terms of content as I&amp;rsquo;m still
       <pubDate>Sun, 27 Oct 2019 22:05:42 +0100</pubDate>
       
       <guid>https://robbi-blechdose.github.io/post/2019-10-27-03-gb-j-compiler/</guid>
-      <description>GB-J Compiler released! A compiler for a custom Java- and C-like language targeting the GameBoy This is a project I&amp;rsquo;ve been working on for quite a while, and I&amp;rsquo;d like to continue doing so in the future.
+      <description>GB-J Compiler released! A compiler for a custom Java- and C-like language targeting the GameBoy  This is a project I&amp;rsquo;ve been working on for quite a while, and I&amp;rsquo;d like to continue doing so in the future.
 It started out as a school project for my A-levels: Write a compiler.
-Choosing the target The original idea was to target some fantasy computer to reduce the complexity of the project. I quickly abandoned that in favor of the GameBoy.</description>
+Choosing the target  The original idea was to target some fantasy computer to reduce the complexity of the project.</description>
     </item>
     
     <item>
@@ -69,10 +68,10 @@ Then suddenly, I had an idea: My car is too old to calculate its gas mileage its
       <pubDate>Sun, 27 Oct 2019 13:52:30 +0100</pubDate>
       
       <guid>https://robbi-blechdose.github.io/post/2019-10-27-01-first-post/</guid>
-      <description> New Blog! 🎉 This is the new blog I&amp;rsquo;ll be using from now on. It&amp;rsquo;ll include posts on all kinds of topics, including (but not limited to):
- Gamedev (for the GameBoy)
- Gamedev (for PC)
- Miscellaneous Arduino and 3D-Printing projects
+      <description>New Blog! 🎉 This is the new blog I&amp;rsquo;ll be using from now on. It&amp;rsquo;ll include posts on all kinds of topics, including (but not limited to):
+  Gamedev (for the GameBoy)
+  Gamedev (for PC)
+  Miscellaneous Arduino and 3D-Printing projects
   </description>
     </item>
     

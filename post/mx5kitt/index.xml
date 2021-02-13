@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MX5 KITT on Robbi Blechdose&#39;s Blog</title>
+    <link>https://robbi-blechdose.github.io/post/mx5kitt/</link>
+    <description>Recent content in MX5 KITT on Robbi Blechdose&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 11 Nov 2020 14:27:01 +0100</lastBuildDate><atom:link href="https://robbi-blechdose.github.io/post/mx5kitt/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MX5 KITT: Central locking</title>
+      <link>https://robbi-blechdose.github.io/post/mx5kitt/01_central_locking/</link>
+      <pubDate>Tue, 08 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://robbi-blechdose.github.io/post/mx5kitt/01_central_locking/</guid>
+      <description>As the MX5 will be my daily driver, there are a few convenience mods I&amp;rsquo;m planning. Chief among these is a feature so standard on modern cars noone pays any attention to it: remote central locking.
+Even though the MX5 only has two doors, it&amp;rsquo;s still unnerving to have to use the key on both doors every time, and popping the trunk with the key gets old fast when you go shopping.</description>
+    </item>
+    
+    <item>
+      <title>MX5 KITT: Introduction</title>
+      <link>https://robbi-blechdose.github.io/post/mx5kitt/00_intro/</link>
+      <pubDate>Wed, 16 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://robbi-blechdose.github.io/post/mx5kitt/00_intro/</guid>
+      <description>Recently, I bought a project car: A 1997 Mazda MX5. It&amp;rsquo;s actually even a special edition called &amp;ldquo;MX5 Classic&amp;rdquo;. It&amp;rsquo;s got all the latest (well, for 20 years ago anyway) things you&amp;rsquo;d want to have: ABS, double airbags, and luckily not much else. It&amp;rsquo;s a relatively simple car and thus great for modding!
+It was only a short drive away, and after initial inspection with my friend Idefix, I immediately picked it up.</description>
+    </item>
+    
+  </channel>
+</rss>

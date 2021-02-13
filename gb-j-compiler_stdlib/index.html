@@ -7,7 +7,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 <meta name="description" content="0. Abbreviations    Abbreviation Description     Pos Position   VBK VRAM Bank   num Number of   spr Sprite   BG Background    Note: ref is currently not a standard data type, but must be provided in one of the two following forms:
- Asm.label for referencing a label in assembly code, which may be included as a generated data file or as inline assembly"/>
+ Asm.label for referencing a label in assembly code, which may be included as a generated data file or as inline assembly &amp;quot;TEXT GOES HERE&amp;quot; for creating string literals  1."/>
 <meta name="keywords" content=""/>
 <meta name="robots" content="noodp"/>
 <link rel="canonical" href="https://robbi-blechdose.github.io/gb-j-compiler_stdlib/" />
@@ -29,7 +29,7 @@
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="GB-J Compiler: Standard Library Documentation :: Robbi Blechdose&#39;s Blog — " />
 <meta name="twitter:description" content="0. Abbreviations    Abbreviation Description     Pos Position   VBK VRAM Bank   num Number of   spr Sprite   BG Background    Note: ref is currently not a standard data type, but must be provided in one of the two following forms:
- Asm.label for referencing a label in assembly code, which may be included as a generated data file or as inline assembly" />
+ Asm.label for referencing a label in assembly code, which may be included as a generated data file or as inline assembly &amp;quot;TEXT GOES HERE&amp;quot; for creating string literals  1." />
 <meta name="twitter:site" content="https://robbi-blechdose.github.io/" />
 <meta name="twitter:creator" content="" />
 <meta name="twitter:image" content="">
@@ -39,7 +39,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:title" content="GB-J Compiler: Standard Library Documentation :: Robbi Blechdose&#39;s Blog — ">
 <meta property="og:description" content="0. Abbreviations    Abbreviation Description     Pos Position   VBK VRAM Bank   num Number of   spr Sprite   BG Background    Note: ref is currently not a standard data type, but must be provided in one of the two following forms:
- Asm.label for referencing a label in assembly code, which may be included as a generated data file or as inline assembly" />
+ Asm.label for referencing a label in assembly code, which may be included as a generated data file or as inline assembly &amp;quot;TEXT GOES HERE&amp;quot; for creating string literals  1." />
 <meta property="og:url" content="https://robbi-blechdose.github.io/gb-j-compiler_stdlib/" />
 <meta property="og:site_name" content="GB-J Compiler: Standard Library Documentation" />
 <meta property="og:image" content="">
@@ -62,7 +62,7 @@
 <body class="">
 
 
-<div class="container full">
+<div class="container center">
 
   <header class="header">
   <div class="header__inner">
@@ -80,6 +80,10 @@
     <nav class="menu">
   <ul class="menu__inner menu__inner--desktop">
     
+      
+        
+          <li><a href="../post/mx5kitt">MX-5 KITT</a></li>
+        
       
         
           <li><a href="../s-rc-bots_index">S-RC Bots</a></li>
@@ -100,6 +104,10 @@
   </ul>
 
   <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="../post/mx5kitt">MX-5 KITT</a></li>
+      
     
       
         <li><a href="../s-rc-bots_index">S-RC Bots</a></li>
@@ -140,10 +148,7 @@
   
 
   <div class="post-content">
-    
-
-<h2 id="0-abbreviations">0. Abbreviations</h2>
-
+    <h2 id="0-abbreviations">0. Abbreviations</h2>
 <table>
 <thead>
 <tr>
@@ -151,90 +156,65 @@
 <th>Description</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>Pos</td>
 <td>Position</td>
 </tr>
-
 <tr>
 <td>VBK</td>
 <td>VRAM Bank</td>
 </tr>
-
 <tr>
 <td>num</td>
 <td>Number of</td>
 </tr>
-
 <tr>
 <td>spr</td>
 <td>Sprite</td>
 </tr>
-
 <tr>
 <td>BG</td>
 <td>Background</td>
 </tr>
 </tbody>
 </table>
-
 <p>Note: ref is currently not a standard data type, but must be provided in one of the two following forms:</p>
-
 <ul>
-<li><code>Asm.label</code> for referencing a label in assembly code, which may be included as a generated data file or as inline assembly<br /></li>
+<li><code>Asm.label</code> for referencing a label in assembly code, which may be included as a generated data file or as inline assembly</li>
 <li><code>&quot;TEXT GOES HERE&quot;</code> for creating string literals</li>
 </ul>
-
 <h2 id="1-standard-methods">1. Standard Methods</h2>
-
-<p><code>void halt()</code><br />
+<p><code>void halt()</code><br>
 Puts the CPU into low-power mode until the next interrupt occurs.</p>
-
-<p><code>void waitVBlank()</code><br />
+<p><code>void waitVBlank()</code><br>
 Waits until a VBlank occurs. VRAM may be modified then.</p>
-
-<p><code>void enableInterrupts()</code><br />
+<p><code>void enableInterrupts()</code><br>
 Enables interrupts.</p>
-
-<p><code>void disableInterrupts()</code><br />
+<p><code>void disableInterrupts()</code><br>
 Disables interrupts.</p>
-
-<p><code>void softwareBreak()</code><br />
+<p><code>void softwareBreak()</code><br>
 Adds an <code>ld b, b</code> into the code on which BGB can break.</p>
-
-<p><code>void switchBank(char bankNo)</code><br />
+<p><code>void switchBank(char bankNo)</code><br>
 Switches Bank X to the bank with the number <code>bankNo</code>. Possible values are 0-255 for MBC5, 1-127 for MBC3 and 1-127 excluding banks 32, 64 and 96 for MBC1.</p>
-
-<p><code>void copyDMARoutine()</code><br />
+<p><code>void copyDMARoutine()</code><br>
 Allows usage of sprites. Should be called once at startup.</p>
-
-<p><code>void clearOAM()</code><br />
+<p><code>void clearOAM()</code><br>
 Clears the sprite memory, otherwise garbage may appear on the screen.</p>
-
-<p><code>void dmaTransfer()</code><br />
+<p><code>void dmaTransfer()</code><br>
 Transfers sprite data. Should always be called in VBlank.</p>
-
 <h2 id="2-graphics">2. Graphics</h2>
-
-<h4 id="1-1-sprites">1.1. Sprites</h4>
-
-<hr />
-
+<h4 id="11-sprites">1.1. Sprites</h4>
+<hr>
 <p>Location: <code>stdlib/Graphics/Sprites.asm</code></p>
-
-<p><code>void setSpritePosition(char sprIndex, char xPos, char yPos)</code><br />
-Sets the position of the sprite at index <code>sprIndex</code>.<br />
+<p><code>void setSpritePosition(char sprIndex, char xPos, char yPos)</code><br>
+Sets the position of the sprite at index <code>sprIndex</code>.<br>
 Note: 0,0 is outside the screen area. The top-left corner of the screen is at 8, 16.</p>
-
-<p><code>void setSpriteTile(char sprIndex, char tileIndex)</code><br />
+<p><code>void setSpriteTile(char sprIndex, char tileIndex)</code><br>
 Sets the tile of the sprite at <code>sprIndex</code> to <code>tileIndex</code>.</p>
-
-<p><code>void setSpriteAttributes(char sprIndex, char sprAttribute)</code><br />
-Sets the attributes of the sprite at <code>sprIndex</code> to <code>sprAttribute</code>.<br />
+<p><code>void setSpriteAttributes(char sprIndex, char sprAttribute)</code><br>
+Sets the attributes of the sprite at <code>sprIndex</code> to <code>sprAttribute</code>.<br>
 See the Sprite Attribute Table on how to create the attribute byte:</p>
-
 <table>
 <thead>
 <tr>
@@ -242,114 +222,82 @@ See the Sprite Attribute Table on how to create the attribute byte:</p>
 <th>Description</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>7</td>
 <td>Sprite &lt;-&gt; Background Priority (0 = Sprite above Background)</td>
 </tr>
-
 <tr>
 <td>6</td>
 <td>Y Flip (0 = Normal)</td>
 </tr>
-
 <tr>
 <td>5</td>
 <td>X Flip (0 = Normal)</td>
 </tr>
-
 <tr>
 <td>4</td>
 <td>Palette Index DMG-Mode</td>
 </tr>
-
 <tr>
 <td>3</td>
 <td>VRAM bank of the tile</td>
 </tr>
-
 <tr>
 <td>2-0</td>
 <td>Palette Index CGB-Mode</td>
 </tr>
 </tbody>
 </table>
-
-<h4 id="1-2-tiles-background-and-window">1.2. Tiles, Background and Window</h4>
-
-<hr />
-
+<h4 id="12-tiles-background-and-window">1.2. Tiles, Background and Window</h4>
+<hr>
 <p>Location: <code>stdlib/Graphics/Tiles.asm</code></p>
-
-<p><code>void loadTiles(char vbk, char index, char numTiles, ref tileData)</code><br />
-Loads tiles from the reference <code>tileData</code> into VRAM. The <code>index</code> is the location in VRAM where the tiles are placed.<br />
+<p><code>void loadTiles(char vbk, char index, char numTiles, ref tileData)</code><br>
+Loads tiles from the reference <code>tileData</code> into VRAM. The <code>index</code> is the location in VRAM where the tiles are placed.<br>
 If VRAM bank 1 is used, the data is loaded as tile attributes instead.</p>
-
-<p><code>void setBGTile(char vbk, char tileIndex, char xPos, char yPos)</code><br />
-Places a single tile on the BG map at the given position.<br />
+<p><code>void setBGTile(char vbk, char tileIndex, char xPos, char yPos)</code><br>
+Places a single tile on the BG map at the given position.<br>
 If VRAM bank 1 is used, attributes for the tile are set instead.</p>
-
-<p><code>void setWinTile(char vbk, char tileIndex, char xPos, char yPos)</code><br />
-Places a single tile on the window map at the given position.<br />
+<p><code>void setWinTile(char vbk, char tileIndex, char xPos, char yPos)</code><br>
+Places a single tile on the window map at the given position.<br>
 If VRAM bank 1 is used, attributes for the tile are set instead.</p>
-
-<p><code>void loadBGMap(char vbk, ref mapData, char xPos, char yPos, char xSize, char ySize)</code><br />
-Loads a BG map and places it at the position and uses the given Size.<br />
+<p><code>void loadBGMap(char vbk, ref mapData, char xPos, char yPos, char xSize, char ySize)</code><br>
+Loads a BG map and places it at the position and uses the given Size.<br>
 If VRAM bank 1 is used, attributes for the tiles are set instead.</p>
-
-<p><code>void loadWinMap(char vbk, ref mapData, char xPos, char yPos, char xSize, char ySize)</code><br />
+<p><code>void loadWinMap(char vbk, ref mapData, char xPos, char yPos, char xSize, char ySize)</code><br>
 Loads a window map and places it at the position and uses the given Size.
 If VRAM bank 1 is used, attributes for the tiles are set instead.</p>
-
-<p><code>void setBGScroll(char xScroll, char yScroll)</code><br />
-Loads the BG scrolling registers with the given values.<br />
+<p><code>void setBGScroll(char xScroll, char yScroll)</code><br>
+Loads the BG scrolling registers with the given values.<br>
 Note: The overflow of the chars may be used to create an &ldquo;infinite scrolling&rdquo; effect.</p>
-
-<p><code>void setWinPosition(char xPos, char yPos)</code><br />
-Places the window at the given position.<br />
+<p><code>void setWinPosition(char xPos, char yPos)</code><br>
+Places the window at the given position.<br>
 Note: 0, 7 is the top-left corner of the screen.</p>
-
-<h4 id="1-3-lcd-control">1.3. LCD control</h4>
-
-<hr />
-
+<h4 id="13-lcd-control">1.3. LCD control</h4>
+<hr>
 <p>Location: <code>stdlib/Graphics/LCD.asm</code></p>
-
-<p><code>void lcdOff ()</code><br />
+<p><code>void lcdOff ()</code><br>
 Turns off the LCD. It turns white for the user. VRAM access is now always possible.</p>
-
-<p><code>void lcdOn(char lcdOn, char winMapAddr, char bgOn, char bgTileAddr, char bgMapAddr, char spriteSize, char spritesOn, char bgOn)</code><br />
-Turns on the LCD with the given arguments.<br />
+<p><code>void lcdOn(char lcdOn, char winMapAddr, char bgOn, char bgTileAddr, char bgMapAddr, char spriteSize, char spritesOn, char bgOn)</code><br>
+Turns on the LCD with the given arguments.<br>
 Note: Each of the values may only be 0 or 1.</p>
-
-<p><code>void loadPalettes(char isSpritePalette, ref palette)</code><br />
-Loads palettes into VRAM.<br />
+<p><code>void loadPalettes(char isSpritePalette, ref palette)</code><br>
+Loads palettes into VRAM.<br>
 <em>CGB only.</em></p>
-
 <h2 id="2-miscellaneous">2. Miscellaneous</h2>
-
-<h4 id="2-1-utils">2.1. Utils</h4>
-
-<hr />
-
+<h4 id="21-utils">2.1. Utils</h4>
+<hr>
 <p>Location: <code>stdlib/Utils.asm</code></p>
-
-<p><code>void readPad()</code><br />
+<p><code>void readPad()</code><br>
 Reads the D-Pad and all buttons and saves the current status internally.</p>
-
-<p><code>char isButtonPressed(char bitmask)</code><br />
+<p><code>char isButtonPressed(char bitmask)</code><br>
 Returns 1 if the button is pressed.</p>
-
-<p><code>char wasButtonPressed(char bitmask)</code><br />
+<p><code>char wasButtonPressed(char bitmask)</code><br>
 Returns 1 if the button was pressed in the last frame before the current one.</p>
-
-<p><code>void switchSpeed()</code><br />
-Switches between Single- and Double-Speed Mode.<br />
+<p><code>void switchSpeed()</code><br>
+Switches between Single- and Double-Speed Mode.<br>
 <em>CGB only.</em></p>
-
 <h6 id="button-bitmask-table">Button Bitmask Table</h6>
-
 <table>
 <thead>
 <tr>
@@ -357,87 +305,66 @@ Switches between Single- and Double-Speed Mode.<br />
 <th>Description</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>7</td>
-<td>D-Pad &darr;</td>
+<td>D-Pad ↓</td>
 </tr>
-
 <tr>
 <td>6</td>
-<td>D-Pad &uarr;</td>
+<td>D-Pad ↑</td>
 </tr>
-
 <tr>
 <td>5</td>
-<td>D-Pad &larr;</td>
+<td>D-Pad ←</td>
 </tr>
-
 <tr>
 <td>4</td>
-<td>D-Pad &rarr;</td>
+<td>D-Pad →</td>
 </tr>
-
 <tr>
 <td>3</td>
 <td>Start</td>
 </tr>
-
 <tr>
 <td>2</td>
 <td>Select</td>
 </tr>
-
 <tr>
 <td>1</td>
 <td>B</td>
 </tr>
-
 <tr>
 <td>0</td>
 <td>A</td>
 </tr>
 </tbody>
 </table>
-
-<h4 id="2-2-gameboy-printer-support">2.2. GameBoy Printer support</h4>
-
-<hr />
-
+<h4 id="22-gameboy-printer-support">2.2. GameBoy Printer support</h4>
+<hr>
 <p>Location: <code>stdlib/GBPrinter.asm</code></p>
-
-<p><code>char initPrinter()</code><br />
-Sends an init packet to the printer and waits for an answer.<br />
+<p><code>char initPrinter()</code><br>
+Sends an init packet to the printer and waits for an answer.<br>
 1 means the connection is OK.</p>
-
-<p><code>void transferData()</code><br />
-ends the contents of the buffer to the printer in multiple frames.<br />
+<p><code>void transferData()</code><br>
+ends the contents of the buffer to the printer in multiple frames.<br>
 The buffer is the top left 20x18 tiles of the window layer.</p>
-
-<p><code>char getStatus()</code><br />
+<p><code>char getStatus()</code><br>
 Asks the printer for its status and returns the answer byte.</p>
-
-<p><code>void startPrint()</code><br />
+<p><code>void startPrint()</code><br>
 Attempts to start a print. Only works if data has been transferred beforehand.</p>
-
-<h4 id="2-3-simple-text-display">2.3. Simple text display</h4>
-
-<hr />
-
-<p>Location: <code>stdlib/Graphics/ScreenPrinter.asm</code><br />
+<h4 id="23-simple-text-display">2.3. Simple text display</h4>
+<hr>
+<p>Location: <code>stdlib/Graphics/ScreenPrinter.asm</code><br>
 Disclaimer: Should only be used for testing purposes due to the amount of VRAM and CPU time used.</p>
-
-<p><code>void loadCharset()</code><br />
-Loads the charset into VRAM.<br />
+<p><code>void loadCharset()</code><br>
+Loads the charset into VRAM.<br>
 It contains letters <code>A</code> - <code>Z</code>, numbers <code>0</code> - <code>9</code> and the special characters <code>?,.!-</code>.</p>
-
-<p><code>void print(char xPos, char yPos, ref text)</code><br />
-Prints text to the screen at the given position.<br />
+<p><code>void print(char xPos, char yPos, ref text)</code><br>
+Prints text to the screen at the given position.<br>
 Note: The position is in tiles here.</p>
-
-<p><code>void printNumber(char xPos, char yPos, char number)</code><br />
-Prints a number to the screen at the given position.<br />
+<p><code>void printNumber(char xPos, char yPos, char number)</code><br>
+Prints a number to the screen at the given position.<br>
 Note: The position is in tiles here.</p>
 
   </div>
@@ -473,7 +400,7 @@ Note: The position is in tiles here.</p>
   <div class="footer__inner">
     
       <div class="copyright">
-        <span>© 2020 Powered by <a href="http://gohugo.io">Hugo</a></span>
+        <span>© 2021 Powered by <a href="http://gohugo.io">Hugo</a></span>
     
         <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
       </div>

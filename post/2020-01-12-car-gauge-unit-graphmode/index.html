@@ -62,7 +62,7 @@
 <body class="">
 
 
-<div class="container full">
+<div class="container center">
 
   <header class="header">
   <div class="header__inner">
@@ -80,6 +80,10 @@
     <nav class="menu">
   <ul class="menu__inner menu__inner--desktop">
     
+      
+        
+          <li><a href="../../post/mx5kitt">MX-5 KITT</a></li>
+        
       
         
           <li><a href="../../s-rc-bots_index">S-RC Bots</a></li>
@@ -100,6 +104,10 @@
   </ul>
 
   <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="../../post/mx5kitt">MX-5 KITT</a></li>
+      
     
       
         <li><a href="../../s-rc-bots_index">S-RC Bots</a></li>
@@ -140,30 +148,21 @@
   
 
   <div class="post-content">
-    
-
-<h2 id="car-gauge-unit-graph-mode">Car Gauge Unit: Graph Mode</h2>
-
+    <h2 id="car-gauge-unit-graph-mode">Car Gauge Unit: Graph Mode</h2>
 <p>The small screen at the right-hand side of the unit allows me to enter some data whenever I fill up the tank of my car:</p>
-
 <ul>
 <li>The amount of fuel I put in (in litres)</li>
 <li>How much the fuel cost (in € per litre)</li>
 <li>The total mileage of the car</li>
 </ul>
-
 <p>With this, it calculates the gas mileage (in litres / 100km). However, I only had a total average as well as a &ldquo;best ever&rdquo; value.
 The data I entered allowed for more though, so I added this new mode:
 It now saves the last 10 values entered, thus allowing me to plot two graphs, one for gas mileage (yellow) and one for the price of the fuel (red).</p>
-
-<p><img src="../../images/2020-01-12-car-gauge-unit-graphmode/IMG_20200112_114700945.jpg" alt="The graph mode display" width="50%"/></p>
-
+<!-- raw HTML omitted -->
 <p>If I add an eleventh value, the rest are shifted back, making the graph shift left over time. Of course, the 10 isn&rsquo;t a hardcoded value,
 so if I ever feel the need to display 20 data points instead, I can just change the constant in the code.
 However, the saved data changes too, meaning I&rsquo;ll have to add the new 10 entries, it won&rsquo;t remember the ones that were shifted out of the display.</p>
-
 <p>I also finally got around to adding some 3d-printed covers for the 6 buttons. They have symbols on top so you know which button does what.</p>
-
 <p>That&rsquo;s it for this time, I hope you enjoyed reading!</p>
 
   </div>
@@ -206,7 +205,7 @@ However, the saved data changes too, meaning I&rsquo;ll have to add the new 10 e
   <div class="footer__inner">
     
       <div class="copyright">
-        <span>© 2020 Powered by <a href="http://gohugo.io">Hugo</a></span>
+        <span>© 2021 Powered by <a href="http://gohugo.io">Hugo</a></span>
     
         <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
       </div>
