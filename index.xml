@@ -6,24 +6,46 @@
     <description>Recent content on Robbi Blechdose&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 08 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://robbi-blechdose.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 25 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://robbi-blechdose.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>MX5 KITT: Central locking</title>
+      <title>MX-5 KITT: Instrument Cluster</title>
+      <link>https://robbi-blechdose.github.io/mx5kitt/03_instrument_cluster/</link>
+      <pubDate>Thu, 25 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://robbi-blechdose.github.io/mx5kitt/03_instrument_cluster/</guid>
+      <description>Arguably, one of the most recognizable parts of KITT is the retro-futuristic dashboard.
+As such, my MX-5 KITT had to have one too! However, I shrunk the project to just the instrument cluster. This meant that getting it TÜV approved would be possible, and the amount of work would be manageable.
+First order of business was to sketch out what I wanted to have. I eyeballed (pretty badly, admittedly) the shape of the cluster and started drawing: The first and the last sketchNow that I knew what I wanted, it was time to order some parts.</description>
+    </item>
+    
+    <item>
+      <title>MX-5 KITT: Center console</title>
+      <link>https://robbi-blechdose.github.io/mx5kitt/02_center_console/</link>
+      <pubDate>Wed, 24 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://robbi-blechdose.github.io/mx5kitt/02_center_console/</guid>
+      <description>In order to give the car a bit more of the sweet 80s retro-futurism vibes, I started work on a new center console piece.
+Normally, there is an unused spot between the shifter and the power window switches (well, it contains and ashtray, but that is essentially unused space). I decided to design an inset which would replace the ashtray.
+The idea was to add controls for a scanner and a few other useful bits and bobs.</description>
+    </item>
+    
+    <item>
+      <title>MX-5 KITT: Central locking</title>
       <link>https://robbi-blechdose.github.io/mx5kitt/01_central_locking/</link>
       <pubDate>Tue, 08 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>https://robbi-blechdose.github.io/mx5kitt/01_central_locking/</guid>
-      <description>As the MX5 will be my daily driver, there are a few convenience mods I&amp;rsquo;m planning. Chief among these is a feature so standard on modern cars noone pays any attention to it: remote central locking.
-Even though the MX5 only has two doors, it&amp;rsquo;s still unnerving to have to use the key on both doors every time, and popping the trunk with the key gets old fast when you go shopping.</description>
+      <description>As the MX-5 will be my daily driver, there are a few convenience mods I&amp;rsquo;m planning. Chief among these is a feature so standard on modern cars noone pays any attention to it: remote central locking.
+Even though the MX-5 only has two doors, it&amp;rsquo;s still unnerving to have to use the key on both doors every time, and popping the trunk with the key gets old fast when you go shopping.</description>
     </item>
     
     <item>
-      <title>MX5 KITT: Introduction</title>
+      <title>MX-5 KITT: Introduction</title>
       <link>https://robbi-blechdose.github.io/mx5kitt/00_intro/</link>
       <pubDate>Wed, 16 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://robbi-blechdose.github.io/mx5kitt/00_intro/</guid>
-      <description>Recently, I bought a project car: A 1997 Mazda MX5. It&amp;rsquo;s actually even a special edition called &amp;ldquo;MX5 Classic&amp;rdquo;. It&amp;rsquo;s got all the latest (well, for 20 years ago anyway) things you&amp;rsquo;d want to have: ABS, double airbags, and luckily not much else. It&amp;rsquo;s a relatively simple car and thus great for modding!
+      <description>Recently, I bought a project car: A 1997 Mazda MX-5. It&amp;rsquo;s actually even a special edition called &amp;ldquo;MX-5 Classic&amp;rdquo;. It&amp;rsquo;s got all the latest (well, for 20 years ago anyway) things you&amp;rsquo;d want to have: ABS, double airbags, and luckily not much else. It&amp;rsquo;s a relatively simple car and thus great for modding!
 It was only a short drive away, and after initial inspection with my friend Idefix, I immediately picked it up.</description>
     </item>
     
